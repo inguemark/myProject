@@ -11,7 +11,12 @@ import org.springframework.context.annotation.Configuration;
 public class MyProjectConfiguration {
 
     public static void main(String[] args) throws Exception {
-        SpringApplication.run(MyProjectConfiguration.class, args);
+//        System.setProperty("spring.profiles.active", "LOCAL");
+//        SpringApplication.run(MyProjectConfiguration.class, args);
+
+        SpringApplication springApplication = new SpringApplication(MyProjectConfiguration.class);
+//        springApplication.setAdditionalProfiles("LOCAL");
+        springApplication.run(args);
     }
 
 }

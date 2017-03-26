@@ -1,0 +1,14 @@
+spring:
+  main:
+    banner-mode: "off"
+  output:
+    ansi:
+      # active les couleurs dans la console de log
+      enabled: "DETECT"
+
+logging:
+  path: "target/logs"
+
+myproject:
+  message:
+    messageBienvenue: "hey"
