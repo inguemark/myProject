@@ -4,7 +4,8 @@ pipeline {
     stage('build') {
       steps {
         git(url: 'https://github.com/inguemark/myProject.git', branch: 'master', changelog: true)
-        sh 'mvn clean install -DSkipTests'
+        echo 'Coucou !'
+        timeout(time: 10)
       }
     }
   }
