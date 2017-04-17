@@ -5,7 +5,7 @@ pipeline {
       steps {
         git(url: 'https://github.com/inguemark/myProject.git', branch: 'master', changelog: true)
         echo 'Coucou !'
-        timeout(time: 10)
+        build 'myProject-master-build'
       }
     }
   }
