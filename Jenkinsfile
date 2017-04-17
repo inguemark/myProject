@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        git(url: 'git@github.com:inguemark/myProject.git', branch: 'master')
+        git(url: 'https://github.com/inguemark/myProject.git', branch: 'master', changelog: true)
       }
     }
   }
