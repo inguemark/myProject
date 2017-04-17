@@ -3,10 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        git(url: 'https://github.com/inguemark/myProject.git', branch: 'master', changelog: true)
-        echo 'Coucou !'
-        build 'myProject-master-build'
-        sh 'mvn clean install'
+        sh '/opt/apache-maven-3.5.0/bin/mvn clean install'
       }
     }
   }
