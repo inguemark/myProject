@@ -8,7 +8,7 @@ public class Application {
 
     private static final Logger log = LoggerFactory.getLogger(Application.class);
 
-    public static void main(String args[]) {
+    public static void main(String[] args) {
         // voir https://spring.io/guides/gs/consuming-rest/
         RestTemplate restTemplate = new RestTemplate();
         Quote quote = restTemplate.getForObject("http://gturnquist-quoters.cfapps.io/api/random", Quote.class);
